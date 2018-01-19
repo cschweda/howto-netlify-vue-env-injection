@@ -32,7 +32,7 @@
                   <br>
                   <span class="key">{{apiKey}}</span>
                 </div>
-                <h4 style="margin-top: 20px; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 8px;">Netlify pre-defined examples</h4>
+                <h4 style="margin-top: 20px; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 8px;">Netlify pre-defined variables</h4>
 
                 <div>URL:
                   <br>
