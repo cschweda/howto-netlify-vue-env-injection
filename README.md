@@ -1,8 +1,8 @@
 # Inject Netlify's build environment variables into a Vue SPA via Webpack.
 
-Recently, I wrote an app to query the New York Times API for a list of the top stories in each of the paper's main sections. In order to query the API, I needed a key. As is the case with most API keys, the key is tied to my NYT account and has usage restrictions (a limited amount of API queries per minute, for example.)
+Recently, I wrote an [app to query the New York Times API](https://nyt.metaincognita.com) for a list of the top stories in each of the paper's main sections. In order to query the API, I needed a key. As is the case with most API keys, the key is tied to my NYT account and has usage restrictions (a limited amount of API queries per minute, for example.)
 
-I wanted to deploy the finished app on Netlify, but I realized that in order to do so, I had to publically expose the key in my Github repo. Several users on Netlify's Gitter channel suggested I look into Netlify's build environment variables. These custom variables allow me to specify a key (or any variable) outside of the app and inject it into the app with Webpack, thereby preventing me from publically exposing it in my repo.
+I wanted to deploy the finished app on [Netlify](https://www.netlify.com/), but I realized that in order to do so, I had to publically expose the key in my Github repo. [Several users on Netlify's Gitter channel](https://gitter.im/netlify/community) suggested I look into Netlify's build environment variables. These custom variables allow me to specify a key (or any variable) outside of the app and inject it into the app with Webpack, thereby preventing me from publically exposing it in my repo.
 
 ### The Bad News
 
@@ -71,3 +71,5 @@ In addition, Netlify pre-defines three URL build variables:
 For more detail on these and additional build settings, see Netlify's [excellent documentation on continuous deployment](https://www.netlify.com/docs/continuous-deployment/).
 
 ## Configuration
+
+...
