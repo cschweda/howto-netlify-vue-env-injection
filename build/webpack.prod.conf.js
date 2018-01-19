@@ -107,6 +107,14 @@ const webpackConfig = merge(baseWebpackConfig, {
       children: true,
       minChunks: 3
     }),
+    new webpack.DefinePlugin({
+      // Dynamically access local environment variables based on the environment
+      // ENV: JSON.stringify(require(path.join(__dirname, "src", "config", env))),
+      "process.env": {
+        // defaults the environment to development if not specified
+        "DEPLOY_URL": JSON.stringify(process.env.DEPLOY_URL || "n/a")
+      }
+    })
 
     // copy custom static assets
     new CopyWebpackPlugin([
