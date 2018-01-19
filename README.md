@@ -1,10 +1,12 @@
-# buildenvtest
+# Use Netlify build variables in Vue
 
-> A Vue.js project
+Demo of how to inject Netlify's build environment variables (via Webpack's `Define` plugin) into a Vue instance. This is especially useful for deploying apps with senstive API keys.
+
+Since this app is 100% client-side, the API key (or any similiarly injected variable) **is** embedded in final client bundle(s). However, the method described below allows you to `.gitignore` the key file in your repo.
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -18,4 +20,6 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Configuration
+
+Build environment variables allow you to define specific values within your application depending on the context of the current, running environment.

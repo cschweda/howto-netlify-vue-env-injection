@@ -5,7 +5,7 @@ import App from "./App";
 import router from "./router";
 import "bulma/bulma.sass";
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = process.env.NODE_ENV !== "production";
 
 /* eslint-disable no-new */
 new Vue({

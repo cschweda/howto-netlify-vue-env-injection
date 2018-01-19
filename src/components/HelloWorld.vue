@@ -21,13 +21,34 @@
             <div class="media-content">
               <div class="content">
 
-                <div>Current environment:
+                <h4 style="margin-top: 20px; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 8px;">App-specific build variables</h4>
+
+                <div>NODE_ENV:
                   <span class="key">{{msg}}</span>
 
                 </div>
-                <div> API key:
+                <div>API_KEY:
                   <span class="key">{{apiKey}}</span>
                 </div>
+                <h4 style="margin-top: 20px; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 8px;">Netlify pre-defined examples</h4>
+
+                <div>URL:
+                  <span class="key">{{url}}</span>
+
+                </div>
+
+                <div>DEPLOY_URL:
+                  <span class="key">{{deployUrl}}</span>
+
+                </div>
+
+                <div>REPOSITORY_URL:
+                  <span class="key">{{respositoryUrl}}</span>
+
+                </div>
+
+
+
 
               </div>
 
@@ -35,7 +56,8 @@
           </article>
         </div>
 
-        <div v-html="step1"></div>
+        <a style="margin-top: 30px" class="button is-light" href="https://github.com/cschweda/Netlify-Vue-env-injection">
+          <i class="fab fa-github"></i>&nbsp;View Source</a>
 
 
 
@@ -55,7 +77,10 @@
     data() {
       return {
         msg: process.env.NODE_ENV,
-        apiKey: process.env.API_KEY
+        apiKey: process.env.API_KEY,
+        url: process.env.URL,
+        deployUrl: process.env.DEPLOY_URL,
+        respositoryUrl: process.env.REPOSITORY_URL
       };
     }
   };
