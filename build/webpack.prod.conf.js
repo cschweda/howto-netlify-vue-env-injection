@@ -105,6 +105,18 @@ const webpackConfig = merge(baseWebpackConfig, {
       children: true,
       minChunks: 3
     }),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, "../_redirects"),
+        to: "./"
+      }
+    ]),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, "../.nvmrc"),
+        to: "./"
+      }
+    ]),
 
     // copy custom static assets
     new CopyWebpackPlugin([
