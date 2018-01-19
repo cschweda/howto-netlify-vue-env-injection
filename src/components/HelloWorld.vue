@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
-    Build env test: {{msg}}
-    <br> Netlify DEPLOY_URL: {{netlify}}
+    Current environment: {{msg}}
     <br> Super secret API key: {{apiKey}}
   </div>
 </template>
@@ -16,7 +15,6 @@
     data() {
       return {
         msg: process.env.NODE_ENV,
-        netlify: process.env.DEPLOY_URL,
         apiKey: process.env.API_KEY
       }
     }
