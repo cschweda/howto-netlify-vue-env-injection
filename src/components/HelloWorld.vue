@@ -1,7 +1,13 @@
 <template>
   <div class="hello">
-    Current environment: {{msg}}
-    <br> Super secret API key: {{apiKey}}
+    <br>
+    <br> Current environment:
+
+    <strong>{{msg}}</strong>
+    <br>
+    <br>
+    <br> Super secret API key:
+    <strong>{{apiKey}}</strong>
   </div>
 </template>
 
