@@ -1,15 +1,24 @@
 "use strict";
-const env = require("./env.js");
+
+let env;
+
+// Check to see if 'env.js' exists. If not, use default env.apiKey
+try {
+  env = require("./env.js");
+} catch (e) {
+  if (e.code !== "MODULE_NOT_FOUND") {
+    throw e;
+  }
+  env = {
+    apiKey: "API_KEY_NOT_FOUND"
+  };
+}
+
 const merge = require("webpack-merge");
 const prodEnv = require("./prod.env");
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  // Set API_KEY as Netlify build variable
-  // DEPLOY_URL is already defined during a Netlify deploy
-  //
-  // See: https://www.netlify.com/blog/2016/10/04/access-local-environment-variables-using-webpack/
-  //
-  //
+  // Inject variable into vue app via Webpack define
   API_KEY: JSON.stringify(process.env.API_KEY || env.apiKey)
 });

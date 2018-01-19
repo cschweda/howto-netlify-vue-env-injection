@@ -5,12 +5,18 @@
   "author": "Chris Schweda <cschweda@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev":
+      "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "bulma": "^0.6.2",
+    "node-sass": "^4.7.2",
+
+    "sass-loader": "^6.0.6",
     "vue": "^2.5.2",
+
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -54,9 +60,5 @@
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }

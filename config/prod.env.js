@@ -1,6 +1,9 @@
 "use strict";
 module.exports = {
   NODE_ENV: '"production"',
-  DEPLOY_URL: JSON.stringify(process.env.DEPLOY_URL || "NOT_DEFINED"),
+  // https://www.netlify.com/docs/continuous-deployment/
+  //DEPLOY_URL: JSON.stringify(process.env.DEPLOY_URL || "NOT_DEFINED"),
+  //
+  // This will fetch the API key from the build variable set in the control panel
   API_KEY: JSON.stringify(process.env.API_KEY || "NOT_DEFINED")
 };
