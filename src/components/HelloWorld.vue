@@ -24,25 +24,31 @@
                 <h4 style="margin-top: 20px; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 8px;">App-specific build variables</h4>
 
                 <div>NODE_ENV:
+                  <br>
                   <span class="key">{{msg}}</span>
 
                 </div>
-                <div>API_KEY:
+                <div class="spacer">API_KEY:
+                  <br>
                   <span class="key">{{apiKey}}</span>
                 </div>
                 <h4 style="margin-top: 20px; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 8px;">Netlify pre-defined examples</h4>
 
                 <div>URL:
+                  <br>
                   <span class="key">{{url}}</span>
 
                 </div>
 
-                <div>DEPLOY_URL:
+                <div class="spacer">DEPLOY_URL:
+                  <br>
                   <span class="key">{{deployUrl}}</span>
 
                 </div>
 
-                <div>REPOSITORY_URL:
+                <div class="spacer">
+                  REPOSITORY_URL:
+                  <br>
                   <span class="key">{{respositoryUrl}}</span>
 
                 </div>
@@ -103,5 +109,9 @@
   .key {
     font-weight: bold;
     color: #3e9b50;
+  }
+
+  .spacer {
+    margin-top: 15px;
   }
 </style>
