@@ -1,4 +1,4 @@
-# Use Netlify build variables in a Vue SPA
+# Inject Netlify's build environment variables into a Vue SPA via Webpack.
 
 Recently, I wrote an app to query the New York Times API for a list of the top stories in each of the paper's main sections. In order to query the API, I needed a key. As is the case with most API keys, the key is tied to my NYT account and has usage restrictions (a limited amount of API queries per minute, for example.)
 
@@ -12,7 +12,19 @@ In addition, the API key (in the case of my NYT app, at least) is readily expose
 
 The good news is that the method I describe here allows you to `.gitignore` the file containing your key and not expose it in your public repo. For low impact deployments -- or for quick testing -- the method here is workable. A more robust, secure solution would involve fetching the data server-side and then rendering it to the client. Nuxt (or Next) would be top contenders for this approach.
 
+## Live demo
+
+https://envdemo.metaincognita.com/
+
 ## Build setup
+
+To run this demo:
+
+```bash
+degit https://github.com/cschweda/Netlify-Vue-env-injection
+```
+
+Then:
 
 ```bash
 # install dependencies

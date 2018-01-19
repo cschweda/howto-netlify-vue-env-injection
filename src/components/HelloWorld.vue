@@ -9,7 +9,7 @@
       <div class="column">
         <div>
           <h1>
-            <strong>Injecting Netlify build variables into Vue</strong>
+            <strong>Inject Netlify's build environment variables into Vue via Webpack</strong>
           </h1>
         </div>
 
