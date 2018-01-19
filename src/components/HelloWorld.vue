@@ -2,20 +2,22 @@
   <div class="hello">
     Build env test: {{msg}}
     <br> Netlify DEPLOY_URL: {{netlify}}
+    <br> Super secret API key: {{apiKey}}
   </div>
 </template>
 
 <script>
+  console.log(process.env.API_KEY)
   export default {
     name: 'HelloWorld',
     mounted: function () {
-      console.log('Mounted')
-      console.log(process.env.NODE_ENV)
+      console.log(process.env.API_KEY)
     },
     data() {
       return {
         msg: process.env.NODE_ENV,
-        netlify: process.env.DEPLOY_URL
+        netlify: process.env.DEPLOY_URL,
+        apiKey: process.env.API_KEY
       }
     }
   }
