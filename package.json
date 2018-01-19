@@ -8,15 +8,16 @@
     "dev":
       "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "format":
+      "prettier es5 --tab-width=2 --print-width=120 --write src/**/*.{js,vue}"
   },
   "dependencies": {
     "bulma": "^0.6.2",
     "node-sass": "^4.7.2",
-
+    "prettier": "^1.10.2",
     "sass-loader": "^6.0.6",
     "vue": "^2.5.2",
-
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
