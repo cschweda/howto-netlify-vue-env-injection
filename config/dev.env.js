@@ -25,5 +25,6 @@ module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
   REPOSITORY_URL: JSON.stringify(process.env.REPOSITORY_URL || "NOT_DEFINED"),
   // Inject variable into vue app via Webpack define
-  API_KEY: JSON.stringify(process.env.API_KEY || env.apiKey)
+  API_KEY: JSON.stringify(process.env.API_KEY || env.apiKey),
+  NODE_VERSION: JSON.stringify(process.env.NODE_VERSION || "NOT_DEFINED")
 });
