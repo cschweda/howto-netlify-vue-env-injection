@@ -53,6 +53,13 @@
 
                 </div>
 
+                <div class="spacer">
+                  NODE_VERSION:
+                  <br>
+                  <span class="key">{{nodeVersion}}</span>
+
+                </div>
+
 
 
 
@@ -86,7 +93,8 @@
         apiKey: process.env.API_KEY,
         url: process.env.URL,
         deployUrl: process.env.DEPLOY_URL,
-        respositoryUrl: process.env.REPOSITORY_URL
+        respositoryUrl: process.env.REPOSITORY_URL,
+        nodeVersion: process.env.NODE_VERSION
       };
     }
   };
