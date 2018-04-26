@@ -7,5 +7,6 @@ module.exports = {
   REPOSITORY_URL: JSON.stringify(process.env.REPOSITORY_URL || "NOT_DEFINED"),
   //
   // This will fetch the API key from the build variable set in the control panel
-  API_KEY: JSON.stringify(process.env.API_KEY || "NOT_DEFINED")
+  API_KEY: JSON.stringify(process.env.API_KEY || "NOT_DEFINED"),
+  NODE_VERSION: JSON.stringify(process.env.NODE_VERSION || "NOT_DEFINED")
 };
